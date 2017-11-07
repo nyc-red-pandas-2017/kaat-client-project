@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <title>Material Design Bootstrap</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Material Design Bootstrap -->
+    <link href="css/mdb.min.css" rel="stylesheet">
+
+    <link href="css/style.css" rel="stylesheet">
+
+    <style rel="stylesheet">
+        /* TEMPLATE STYLES */
+
+        .nopadding {
+            margin-top: 0 !important;
+        }
+
+        .navbar {
+            background-color: #49071c;
+        }
+
+        footer.page-footer {
+            background-color: #49071c;
+            margin-top: 2rem;
+        }
+
+        .pattern-4 {
+            background-attachment: fixed;
+        }
+
+        .view {
+            background: url("https://mdbootstrap.com/img/Photos/Horizontal/Food/full%20page/9.jpg")no-repeat center center;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            height: 100vh;
+        }
+
+        .full-bg-img {
+            color: #fff;
+        }
+
+        .payment .fa:not(:first-child) {
+            margin-left: 10px;
+            color: rgba(255, 255, 255, .8);
+        }
+
+        input[type="text"]:focus:not([readonly]) {
+            border-color: #C00;
+            box-shadow: 0 1px 0 0 #C00;
+            color: #fff;
+        }
+
+        input[type="text"]:not([readonly])+label {
+            color: rgba(255, 255, 255, .65);
+        }
+
+        input[type="text"]:focus:not([readonly])+label {
+            color: #fff;
+        }
+        .navbar .btn-group .dropdown-menu a:hover {
+            color: #000 !important;
+        }
+        .navbar .btn-group .dropdown-menu a:active {
+            color: #fff !important;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <!--Navigation & Intro-->
+    <header>
+
+
+        <!--Navbar-->
+        <nav class=" navbar navbar-expand-lg navbar-dark">
+            <div class="container">
+
+                <a class="navbar-brand waves-effect waves-light" href="#">Navbar</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-3" aria-controls="navbarSupportedContent-3"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent-3">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link waves-effect waves-light" href="#">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link waves-effect waves-light" href="#">Features</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link waves-effect waves-light" href="#">Pricing</a>
+                        </li>
+                        <li class="nav-item btn-group">
+                            <a class="nav-link dropdown-toggle waves-effect waves-light" id="navbarDropdownMenuLink-3" data-toggle="dropdown" aria-haspopup="true"
+                                aria-expanded="false">Dropdown 
+                        </a>
+                            <div class="dropdown-menu dropdown-menu-right dropdown-unique" aria-labelledby="navbarDropdownMenuLink-3">
+                                <a class="dropdown-item waves-effect waves-light" href="#">Action</a>
+                                <a class="dropdown-item waves-effect waves-light" href="#">Another action</a>
+                                <a class="dropdown-item waves-effect waves-light" href="#">Something else here</a>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav ml-auto nav-flex-icons">
+                        <li class="nav-item">
+                            <a class="nav-link waves-effect waves-light"><i class="fa fa-twitter"></i></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link waves-effect waves-light"><i class="fa fa-google-plus"></i></a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle waves-effect waves-light" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+                                aria-expanded="false"><i class="fa fa-user"></i> 
+                        </a>
+                            <div class="dropdown-menu dropdown-menu-right dropdown-unique" aria-labelledby="navbarDropdownMenuLink">
+                                <a class="dropdown-item waves-effect waves-light" href="#">Action</a>
+                                <a class="dropdown-item waves-effect waves-light" href="#">Another action</a>
+                                <a class="dropdown-item waves-effect waves-light" href="#">Something else here</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!--/.Navbar-->
+
+    </header>
+    <!--/Navigation & Intro-->
+
+    <!--Mask-->
+    <div class="view hm-black-light">
+        <div class="full-bg-img flex-center pattern-4">
+            <ul>
+                <li>
+                    <h1 class="h1-responsive wow fadeInUp title"><strong>Hey, wanna eat something?</strong></h1>
+                </li>
+                <li>
+                    <div class="row wow fadeIn" data-wow-delay="0.4s">
+                        <div class="col-md-3">
+                            <div class="md-form">
+                                <input type="text" id="form1" class="form-control">
+                                <label for="form1">Your city</label>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="md-form">
+                                <input type="text" id="form2" class="form-control validate">
+                                <label for="form2">Street</label>
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="md-form">
+                                <input type="text" id="form3" class="form-control validate">
+                                <label for="form3">House</label>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="md-form">
+                                <button class="btn btn-lg btn-danger">Order</button>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="payment">
+                    <i class="fa fa-cc-visa fa-2x" aria-hidden="true"></i>
+                    <i class="fa fa-cc-mastercard fa-2x" aria-hidden="true"></i>
+                    <i class="fa fa-money fa-2x" aria-hidden="true"></i>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!--/.Mask-->
+
+    <!--Footer-->
+    <footer class="page-footer center-on-small-only nopadding ">
+
+        <!--Footer links-->
+        <div class="container-fluid">
+            <div class="row">
+                <!--First column-->
+                <div class="col-lg-3 col-md-6 ml-auto">
+                    <h5 class="title mb-3"><strong>About material design</strong></h5>
+                    <p>Material Design (codenamed Quantum Paper) is a design language developed by Google.</p>
+                    <p>Material Design for Bootstrap (MDB) is a powerful Material Design UI KIT for most popular HTML, CSS,
+                        and JS framework - Bootstrap.</p>
+                </div>
+                <!--/.First column-->
+                <hr class="w-100 clearfix d-sm-none">
+                <!--Second column-->
+                <div class="col-lg-2 col-md-6 ml-auto">
+                    <h5 class="title mb-3"><strong>First column</strong></h5>
+                    <ul>
+                        <li>
+                            <a href="#!">Link 1</a>
+                        </li>
+                        <li>
+                            <a href="#!">Link 2</a>
+                        </li>
+                        <li>
+                            <a href="#!">Link 3</a>
+                        </li>
+                        <li>
+                            <a href="#!">Link 4</a>
+                        </li>
+                    </ul>
+                </div>
+                <!--/.Second column-->
+                <hr class="w-100 clearfix d-sm-none">
+                <!--Third column-->
+                <div class="col-lg-2 col-md-6 ml-auto">
+                    <h5 class="title mb-3"><strong>Second column</strong></h5>
+                    <ul>
+                        <li>
+                            <a href="#!">Link 1</a>
+                        </li>
+                        <li>
+                            <a href="#!">Link 2</a>
+                        </li>
+                        <li>
+                            <a href="#!">Link 3</a>
+                        </li>
+                        <li>
+                            <a href="#!">Link 4</a>
+                        </li>
+                    </ul>
+                </div>
+                <!--/.Third column-->
+                <hr class="w-100 clearfix d-sm-none">
+                <!--Fourth column-->
+                <div class="col-lg-2 col-md-6 ml-auto">
+                    <h5 class="title mb-3"><strong>Third column</strong></h5>
+                    <ul>
+                        <li>
+                            <a href="#!">Link 1</a>
+                        </li>
+                        <li>
+                            <a href="#!">Link 2</a>
+                        </li>
+                        <li>
+                            <a href="#!">Link 3</a>
+                        </li>
+                        <li>
+                            <a href="#!">Link 4</a>
+                        </li>
+                    </ul>
+                </div>
+                <!--/.Fourth column-->
+            </div>
+        </div>
+        <!--/.Footer links-->
+
+        <hr>
+
+        <!--Call to action-->
+        <div class="call-to-action">
+            <h4 class="mb-5">Material Design for Bootstrap</h4>
+            <ul>
+                <li>
+                    <h5>Get our UI KIT for free</h5>
+                </li>
+                <li><a target="_blank" href="https://mdbootstrap.com/getting-started/" class="btn btn-primary" rel="nofollow">Sign up!</a></li>
+                <li><a target="_blank" href="https://mdbootstrap.com/material-design-for-bootstrap/" class="btn btn-info" rel="nofollow">Learn more</a></li>
+            </ul>
+        </div>
+        <!--/.Call to action-->
+
+        <!--Copyright-->
+        <div class="footer-copyright">
+            <div class="container-fluid">
+                © 2015 Copyright: <a href="https://www.MDBootstrap.com"> MDBootstrap.com </a>
+
+            </div>
+        </div>
+        <!--/.Copyright-->
+
+    </footer>
+    <!--/.Footer-->
+
+    <!-- SCRIPTS -->
+
+    <!-- JQuery -->
+    <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+
+    <!-- Bootstrap dropdown -->
+    <script type="text/javascript" src="js/popper.min.js"></script>
+
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="js/mdb.min.js"></script>
+
+    <script>
+        new WOW().init();
+    </script>
+
+</body>
+
+</html>
