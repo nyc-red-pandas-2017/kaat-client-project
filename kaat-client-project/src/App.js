@@ -97,7 +97,7 @@ const Nav = () => (
                 <ul>
                   <li> <a className="nav-link waves-effect waves-light" style={{color:'white'}} href="/appetizers">Appetizers</a> </li>
                   <li> <a className="nav-link waves-effect waves-light" style={{color:'white'}} href="/salads">Salads</a> </li>
-                  <li> <a className="nav-link waves-effect waves-light" style={{color:'white'}} href="/main-courses">Main courses</a> </li>
+                  <li> <a className="nav-link waves-effect waves-light" style={{color:'white'}} href="/maincourses">Main courses</a> </li>
                   <li> <a className="nav-link waves-effect waves-light" style={{color:'white'}} href="/desserts">Desserts</a> </li>
                 </ul>
               </div>
