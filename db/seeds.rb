@@ -26,15 +26,17 @@ end
 @main_course = Category.create(name:'Main Course')
 @dessert = Category.create(name:'Dessert')
 
+categories = [@appetizer, @salad, @main_course, @dessert]
+
+
 15.times do
-  Recipe.create(name: Faker::Food.dish, ingredients: Faker::Food.ingredient, directions: "Please read manual", difficulty: Faker::Number.between(1, 10), prep_time: Faker::Number.digit, category_id: categories.sample, user_id: users.sample)
+  Recipe.create(name: Faker::Food.dish, ingredients: Faker::Food.ingredient, directions: "Please read manual", difficulty: Faker::Number.between(1, 10), prep_time: Faker::Number.digit, category_id: categories.sample.id, user_id: User.all.sample.id)
 end
 
 15.times do
-  Comment.create(text: "Excellent recipe", recipe_id: recipes.sample, used_id: users.sample)
+  Comment.create(text: "Excellent recipe", recipe_id: Recipe.all.sample.id, user_id: User.all.sample.id)
 end
 
 15.times do
-  Rating.create(votes: Faker::Number.digit, recipe_id: recipes.sample, user_id: users.sample)
+  Rating.create(votes: Faker::Number.digit, recipe_id: Recipe.all.sample.id, user_id: User.all.sample.id)
 end
-
