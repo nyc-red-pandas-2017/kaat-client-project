@@ -5,16 +5,26 @@ import './template-style/css/mdb.min.css';
 
 class Appetizers extends Component {
   render() {
+    let apps = [{
+        name: 'foo',
+        link: 'bar'
+    },
+    {
+
+    }]
     return (
       <div className="view-other hm-black-light">
         <br/>
         <h2>Appetizers</h2>
         <br/>
           <ul>
-            <li> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </li>
-            <li> Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </li>
-            <li> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </li>
-            <li> Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.  </li>
+          { /* {["appetizer1", "appetizer2", "appetizer3", "appetizer4"].map((item) => {
+              return (
+                <Item
+                  data={item}
+                />
+              )
+            })} */}
           </ul>
           <a className="nav-link waves-effect waves-light" href="/categories">Back to list of categories</a>
       </div>

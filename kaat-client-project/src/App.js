@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+//import logo from './logo.svg';
 import './App.css';
 import './template-style/css/bootstrap.min.css';
 import './template-style/css/mdb.min.css';
@@ -61,6 +61,9 @@ const Nav = () => (
             </li>
             <li className="nav-item">
               <Link className="nav-link waves-effect waves-light" to="/categories">Categories</Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link waves-effect waves-light" to="/">Create a new recipe</Link>
             </li>
           </ul>
           <ul className="navbar-nav ml-auto nav-flex-icons">
