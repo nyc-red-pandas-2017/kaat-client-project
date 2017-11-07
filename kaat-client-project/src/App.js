@@ -10,6 +10,7 @@ import Appetizers from './appetizers';
 import Salads from './salads';
 import MainCourses from './maincourses';
 import Desserts from './desserts';
+import Recipe from './recipe';
 
 import {
   BrowserRouter as Router,
@@ -24,14 +25,14 @@ class App extends Component {
         <div>
           <Nav/>
           <Route exact path="/" component={Home}/>
-          <Route path="/about" component={About}/>
-          <Route path="/login" component={Login}/>
-          <Route path="/signup" component={Signup}/>
-          <Route path="/categories" component={Categories}/>
-          <Route path="/appetizers" component={Appetizers}/>
-          <Route path="/salads" component={Salads}/>
-          <Route path="/maincourses" component={MainCourses}/>
-          <Route path="/desserts" component={Desserts}/>
+          <Route exact path="/login" component={Login}/>
+          <Route exact path="/signup" component={Signup}/>
+          <Route exact path="/categories/1" component={Appetizers}/>
+          <Route exact path="/categories/2" component={Salads}/>
+          <Route exact path="/categories/3" component={MainCourses}/>
+          <Route exact path="/categories/4" component={Desserts}/>
+          <Route exact path="/categories/:categoryId/recipes/:recipeId" component={Recipe}/>
+          <Route exact path="/categories" component={Categories}/>
         </div>
       </Router>
     );
@@ -60,6 +61,9 @@ const Nav = () => (
             </li>
             <li className="nav-item">
               <Link className="nav-link waves-effect waves-light" to="/categories">Categories</Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link waves-effect waves-light" to="/">Create a new recipe</Link>
             </li>
           </ul>
           <ul className="navbar-nav ml-auto nav-flex-icons">
@@ -94,10 +98,10 @@ const Nav = () => (
             <li>
               <div className="row wow fadeIn" data-wow-delay="0.4s">
                 <ul>
-                  <li> <a className="nav-link waves-effect waves-light" style={{color:'white'}} href="/appetizers">Appetizers</a> </li>
-                  <li> <a className="nav-link waves-effect waves-light" style={{color:'white'}} href="/salads">Salads</a> </li>
-                  <li> <a className="nav-link waves-effect waves-light" style={{color:'white'}} href="/maincourses">Main courses</a> </li>
-                  <li> <a className="nav-link waves-effect waves-light" style={{color:'white'}} href="/desserts">Desserts</a> </li>
+                  <li> <a className="nav-link waves-effect waves-light" style={{color:'white'}} href="/categories/1">Appetizers</a> </li>
+                  <li> <a className="nav-link waves-effect waves-light" style={{color:'white'}} href="/categories/2">Salads</a> </li>
+                  <li> <a className="nav-link waves-effect waves-light" style={{color:'white'}} href="/categories/3">Main courses</a> </li>
+                  <li> <a className="nav-link waves-effect waves-light" style={{color:'white'}} href="/categories/4">Desserts</a> </li>
                 </ul>
               </div>
             </li>
