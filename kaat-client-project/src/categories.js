@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import './template-style/css/bootstrap.min.css';
 import './template-style/css/mdb.min.css';
+import {Link} from 'react-router-dom';
 
 class Category extends Component {
   render() {
@@ -10,11 +11,11 @@ class Category extends Component {
         <br/>
         <h2>Browse categories</h2>
         <br/>
-          <ul>
-            <li> <a className="nav-link waves-effect waves-light" href="/categories/1">Appetizers</a> </li>
-            <li> <a className="nav-link waves-effect waves-light" href="/categories/2">Salads</a> </li>
-            <li> <a className="nav-link waves-effect waves-light" href="/categories/3">Main courses</a> </li>
-            <li> <a className="nav-link waves-effect waves-light" href="/categories/4">Desserts</a> </li>
+          <ul className="ul-no-bullet">
+            <li> <Link className="nav-link waves-effect waves-light" to="/categories/1">Appetizers</Link> </li>
+            <li> <Link className="nav-link waves-effect waves-light" to="/categories/2">Salads</Link> </li>
+            <li> <Link className="nav-link waves-effect waves-light" to="/categories/3">Main courses</Link> </li>
+            <li> <Link className="nav-link waves-effect waves-light" to="/categories/4">Desserts</Link> </li>
           </ul>
       </div>
     );

@@ -3,6 +3,7 @@ import './App.css';
 import './template-style/css/bootstrap.min.css';
 import './template-style/css/mdb.min.css';
 import Item from './item';
+import {Link} from 'react-router-dom'
 
 class Desserts extends Component {
   render() {
@@ -11,7 +12,7 @@ class Desserts extends Component {
         <br/>
         <h2>Desserts</h2>
         <br/>
-          <ul>
+          <ul className="ul-no-bullet">
             { ["desserts1", "desserts2", "desserts3", "desserts4"].map((item, index) => {
                 return (
                   <Item
@@ -20,7 +21,7 @@ class Desserts extends Component {
                 )
               })}
           </ul>
-          <a className="nav-link waves-effect waves-light" href="/categories">Back to list of categories</a>
+          <Link className="nav-link waves-effect waves-light" to="/categories">Back to list of categories</Link>
       </div>
     );
   }

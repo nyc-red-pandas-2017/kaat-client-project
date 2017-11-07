@@ -22,6 +22,26 @@
             background-attachment: fixed;
         }
 
+        .ul-no-bullet {
+          list-style-type: none;
+        }
+
+        .white-bg-p {
+          background-color: white;
+          width: 300px;
+          border: 5px solid lightgrey;
+          padding: 5px;
+          margin: 5px;
+        }
+
+        .white-bg-p-2 {
+          background-color: white;
+          width: 400px;
+          border: 5px solid lightgrey;
+          padding: 5px;
+          margin: 5px;
+
+        }
         .view {
             background: url("https://mdbootstrap.com/img/Photos/Horizontal/Food/full%20page/9.jpg")no-repeat center center;
             -webkit-background-size: cover;

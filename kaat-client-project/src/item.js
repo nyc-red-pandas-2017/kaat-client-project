@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import './template-style/css/bootstrap.min.css';
 import './template-style/css/mdb.min.css';
-import {Link} from 'react-router-dom'
+import {Link} from 'react-router-dom';
 
 
 class Item extends Component {
