@@ -7,5 +7,10 @@ Rails.application.routes.draw do
   devise_for :users, controllers: { sessions: 'users/sessions' }
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
+
   root to: 'static#index'
+
+  devise_for :users
+  resources :recipes, only: [:show, :new, :create]
+
 end
