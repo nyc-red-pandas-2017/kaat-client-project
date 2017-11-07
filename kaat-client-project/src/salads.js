@@ -12,10 +12,10 @@ class Salads extends Component {
         <h2>Salads</h2>
         <br/>
           <ul>
-            { ["salads1", "salads2", "salads3", "salads4"].map((item) => {
+            { ["salads1", "salads2", "salads3", "salads4"].map((item, index) => {
                 return (
                   <Item
-                    data={item}
+                    data={[2, item, (index + 1)]}
                   />
                 )
               })}

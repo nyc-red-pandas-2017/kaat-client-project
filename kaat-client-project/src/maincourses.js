@@ -12,10 +12,10 @@ class MainCourses extends Component {
         <h2>Main courses</h2>
         <br/>
           <ul>
-            { ["maincourses1", "maincourses2", "maincourses3", "maincourses4"].map((item) => {
+            { ["maincourses1", "maincourses2", "maincourses3", "maincourses4"].map((item, index) => {
                 return (
                   <Item
-                    data={item}
+                    data={[3, item, (index + 1)]}
                   />
                 )
               })}

@@ -19,13 +19,13 @@ class Appetizers extends Component {
         <h2>Appetizers</h2>
         <br/>
           <ul>
-          { ["appetizer1", "appetizer2", "appetizer3", "appetizer4"].map((item) => {
+          { ["appetizer1", "appetizer2", "appetizer3", "appetizer4"].map((item, index) => {
               return (
                 <Item
-                  data={item}
+                  data={[1, item, (index + 1)]}
                 />
               )
-            })} 
+            })}
           </ul>
           <a className="nav-link waves-effect waves-light" href="/categories">Back to list of categories</a>
       </div>

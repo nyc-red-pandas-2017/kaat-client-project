@@ -12,10 +12,10 @@ class Desserts extends Component {
         <h2>Desserts</h2>
         <br/>
           <ul>
-            { ["desserts1", "desserts2", "desserts3", "desserts4"].map((item) => {
+            { ["desserts1", "desserts2", "desserts3", "desserts4"].map((item, index) => {
                 return (
                   <Item
-                    data={item}
+                    data={[4, item, (index + 1)]}
                   />
                 )
               })}
