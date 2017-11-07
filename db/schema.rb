@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171106210643) do
+ActiveRecord::Schema.define(version: 20171106160552) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -46,6 +46,46 @@ ActiveRecord::Schema.define(version: 20171106210643) do
     t.index ["reset_password_token"], name: "index_admin_users_on_reset_password_token", unique: true
   end
 
+  create_table "categories", force: :cascade do |t|
+    t.string "name", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "comments", force: :cascade do |t|
+    t.string "text", null: false
+    t.bigint "recipe_id"
+    t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["recipe_id"], name: "index_comments_on_recipe_id"
+    t.index ["user_id"], name: "index_comments_on_user_id"
+  end
+
+  create_table "ratings", force: :cascade do |t|
+    t.integer "votes"
+    t.bigint "recipe_id"
+    t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["recipe_id"], name: "index_ratings_on_recipe_id"
+    t.index ["user_id"], name: "index_ratings_on_user_id"
+  end
+
+  create_table "recipes", force: :cascade do |t|
+    t.string "name", null: false
+    t.string "ingredients", null: false
+    t.string "directions", null: false
+    t.integer "difficulty", null: false
+    t.integer "prep_time", null: false
+    t.bigint "category_id"
+    t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["category_id"], name: "index_recipes_on_category_id"
+    t.index ["user_id"], name: "index_recipes_on_user_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "first_name", default: "", null: false
     t.string "last_name", default: "", null: false
@@ -65,4 +105,10 @@ ActiveRecord::Schema.define(version: 20171106210643) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "comments", "recipes"
+  add_foreign_key "comments", "users"
+  add_foreign_key "ratings", "recipes"
+  add_foreign_key "ratings", "users"
+  add_foreign_key "recipes", "categories"
+  add_foreign_key "recipes", "users"
 end
