@@ -5,15 +5,8 @@ import './template-style/css/mdb.min.css';
 
 class Item extends Component {
   render() {
-    let apps = [{
-        name: 'foo',
-        link: 'bar'
-    },
-    {
-
-    }]
     return (
-            <li> <a className="nav-link waves-effect waves-light"  href="/Item/1">{this.props.data}</a>  </li>
+            <li> <a className="nav-link waves-effect waves-light"  href="#">{this.props.data}</a>  </li>
     );
   }
 }
