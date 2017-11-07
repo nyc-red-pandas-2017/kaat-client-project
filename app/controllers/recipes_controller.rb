@@ -1,8 +1,10 @@
 class RecipesController < ApplicationController
   def show
+    #binding.pry
     @recipe = Recipe.find(params[:id])
-    @comments = @recipe.comments
-    @ratings = @recipe.ratings
+    #binding.pry
+    @comments = Recipe.find_by(id: params[:id]).comments
+    @ratings = Recipe.find_by(id: params[:id]).ratings
     render json: {recipe: @recipe, comments: @comments, ratings: @ratings}
   end
 
