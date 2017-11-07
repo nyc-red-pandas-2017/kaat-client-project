@@ -7,6 +7,10 @@ import About from './about';
 import Signup from './signup';
 import Login from './login';
 import Categories from './categories';
+import Appetizers from './appetizers';
+import Salads from './salads';
+import MainCourses from './maincourses';
+import Desserts from './desserts';
 
 import {
   BrowserRouter as Router,
@@ -25,6 +29,10 @@ class App extends Component {
           <Route path="/login" component={Login}/>
           <Route path="/signup" component={Signup}/>
           <Route path="/categories" component={Categories}/>
+          <Route path="/appetizers" component={Appetizers}/>
+          <Route path="/salads" component={Salads}/>
+          <Route path="/maincourses" component={MainCourses}/>
+          <Route path="/desserts" component={Desserts}/>
         </div>
       </Router>
     );
