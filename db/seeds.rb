@@ -37,4 +37,3 @@ end
 15.times do
   Rating.create(votes: Faker::Number.digit, recipe_id: recipes.sample, user_id: users.sample)
 end
-
