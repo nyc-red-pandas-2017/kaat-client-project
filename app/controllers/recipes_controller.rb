@@ -1,8 +1,9 @@
 class RecipesController < ApplicationController
   def show
     @recipe = Recipe.find(params[:id])
-    @comments = Comment.all
-    @ratings = Rating.all
+    @comments = @recipe.comments
+    @ratings = @recipe.ratings
+    render json: {recipe: @recipe, comments: @comments, ratings: @ratings}
   end
 
   def new
