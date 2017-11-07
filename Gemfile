@@ -37,6 +37,8 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'rails-controller-testing'
   gem 'faker'
+  gem 'pry'
+  gem 'pry-byebug'
 end
 
 group :development do
@@ -58,5 +60,3 @@ gem 'devise'
 gem 'cancan' # or cancancan
 gem 'draper'
 gem 'pundit'
-
-

@@ -1,8 +1,9 @@
 class RecipesController < ApplicationController
   def show
     @recipe = Recipe.find(params[:id])
-    @comments = Comment.all
-    @ratings = Rating.all
+    @comments = @recipe.comments
+    @ratings = @recipe.ratings
+    render json: {recipe: @recipe, comments: @comments, ratings: @ratings}
   end
 
   def new
@@ -11,10 +12,11 @@ class RecipesController < ApplicationController
 
   def create
     @recipe = Recipe.new(recipe_params)
+    # binding.pry
     if @recipe.save
-      redirect_to @recipe
+      render json: @recipe
     else
-      render "new"
+      render json: {status: 422, errors: @recipe.errors}
     end
   end
 
