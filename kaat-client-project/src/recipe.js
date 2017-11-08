@@ -27,13 +27,16 @@ class Recipe extends Component {
 
   render() {
     let recipe = this.state.recipe
-    console.log(recipe)
+    console.log(recipe);
+    //var url_category = "/categories/" + {recipe.category_id};
     return (
       <div className="view-other hm-black-light">
         <br/>
         <h2>Recipe</h2>
 
+        <Link className="nav-link waves-effect waves-light" to={`/categories/${recipe.category_id}`}>Back to list of recipes in this category</Link><br/>
         <Link className="nav-link waves-effect waves-light" to="/categories">Back to list of categories</Link>
+
             <div className="recipe-container">
               <ul className="ul-no-bullet">
                 <li>
