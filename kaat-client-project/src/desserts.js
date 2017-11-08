@@ -13,7 +13,7 @@ class Desserts extends Component {
         <h2>Desserts</h2>
         <br/>
           <ul className="ul-no-bullet">
-            { ["desserts1", "desserts2", "desserts3", "desserts4"].map((item, index) => {
+            { ["Barbecue Ribs", "Tiramisù", "Fish and chips", "Lasagne"].map((item, index) => {
                 return (
                   <Item
                     data={[4, item, (index + 1)]}
