@@ -6,6 +6,14 @@ import Item from './item';
 import {Link} from 'react-router-dom';
 
 class Appetizers extends Component {
+
+  constructor(){
+    super();
+    this.state= {
+      recipe: {}
+    }
+  }
+
   render() {
     return (
       <div className="view-other hm-black-light">
