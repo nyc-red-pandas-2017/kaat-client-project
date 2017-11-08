@@ -11,6 +11,7 @@ import Salads from './salads';
 import MainCourses from './maincourses';
 import Desserts from './desserts';
 import Recipe from './recipe';
+// import TopNavigation from './navigation';
 
 import {
   BrowserRouter as Router,
@@ -42,6 +43,7 @@ class App extends Component {
 const Nav = () => (
   <nav className=" navbar navbar-expand-lg navbar-dark">
     <div className="container">
+      {/* <TopNavigation/> */}
 
       <a className="navbar-brand waves-effect waves-light" href="/">Recipe Manager</a>
       <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-3" aria-controls="navbarSupportedContent-3"

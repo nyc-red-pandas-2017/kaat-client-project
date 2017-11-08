@@ -2,6 +2,7 @@
   "name": "recipe-manager",
   "private": true,
   "dependencies": {
+    "gravatar-url": "^2.0.0",
     "jquery": "^3.2.1"
   }
 }

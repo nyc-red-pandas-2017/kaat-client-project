@@ -24,29 +24,20 @@ class Signup extends Component {
 
       render() {
         return (
-          <div>
-            <label htmlFor='first_name'> First Name: </label>
-             <input id='first_name' ref='first_name' placeholder='Enter first name' />
-             <br />
-
-             <label htmlFor='first_name'> Last Name: </label>
-             <input ref='last_name' placeholder='Enter last name' />
-             <br />
-
-             <label htmlFor='first_name'> Email: </label>
-             <input ref='email' placeholder='Enter email' />
-             <br />
-
-             <label htmlFor='first_name'> Password: </label>
-             <input ref='password' placeholder='Enter password' />
-             <br />
-
-             <label htmlFor='first_name'> Password confirmation: </label>
-             <input ref='password_confirmation' />
-             <br />
-
-             <button onClick={this.handleClick}>Submit</button>
-            </div>
+          <div className="view-other hm-black-light">
+            <br/>
+            <h2>Sign Up</h2>
+            <br/>
+            <form action="/action_page.php" method="get">
+            <ul>
+              <li> First name: <input type="text" name="first_name"/> </li> <br/>
+              <li> Last name: <input type="text" name="last_name"/> </li> <br/>
+              <li> Email: <input type="text" name="email"/> </li> <br/>
+              <li> Password: <input type="password" name="password"/> </li> <br/>
+            <input type="submit" value="Log In"/>
+            </ul>
+            </form>
+          </div>
           )
         }
 }
