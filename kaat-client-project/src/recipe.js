@@ -34,7 +34,7 @@ class Recipe extends Component {
     return (
       <div className="view-other hm-black-light">
         <br/>
-        <h2>Recipe</h2>
+        <h2>Your recipe</h2>
 
         <Link className="nav-link waves-effect waves-light" to="/categories">Back to list of categories</Link>
 

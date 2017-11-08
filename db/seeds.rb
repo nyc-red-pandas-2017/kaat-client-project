@@ -31,14 +31,60 @@ end
 
 categories = [@appetizer, @salad, @main_course, @dessert]
 
-15.times do
-  Recipe.create(name: Faker::Food.dish, ingredients: Faker::Food.ingredient, directions: "Please read manual", difficulty: Faker::Number.between(1, 10), prep_time: Faker::Number.digit, category_id: categories.sample.id, user_id: User.all.sample.id)
-end
+# 15.times do
+#   Recipe.create(name: Faker::Food.dish, ingredients: Faker::Food.ingredient, directions: "Please read manual",
+#   difficulty: Faker::Number.between(1, 5), prep_time: Faker::Number.digit, category_id: categories.sample.id,
+#   user_id: 1)
+# end
+#
+# 15.times do
+#   Comment.create(text: "Excellent recipe", recipe_id: Recipe.all.sample.id, user_id: 1)
+# end
+#
+# 15.times do
+#   Rating.create(votes: Faker::Number.digit, recipe_id: Recipe.all.sample.id, user_id: 1)
+# end
 
-15.times do
-  Comment.create(text: "Excellent recipe", recipe_id: Recipe.all.sample.id, user_id: User.all.sample.id)
-end
+# Category 1: Appetizers
+Recipe.create(name: "Dessert Crepes", ingredients: Faker::Food.ingredient, directions: "Please read manual",
+   difficulty: Faker::Number.between(1, 5), prep_time: Faker::Number.digit, category_id: 1,
+   user_id: 1)
+ Recipe.create(name: Faker::Food.dish, ingredients: Faker::Food.ingredient, directions: "Please read manual",
+    difficulty: Faker::Number.between(1, 5), prep_time: Faker::Number.digit, category_id: 1,
+    user_id: 1)
+Recipe.create(name: Faker::Food.dish, ingredients: Faker::Food.ingredient, directions: "Please read manual",
+   difficulty: Faker::Number.between(1, 5), prep_time: Faker::Number.digit, category_id: 1,
+   user_id: 1)
 
-15.times do
-  Rating.create(votes: Faker::Number.digit, recipe_id: Recipe.all.sample.id, user_id: User.all.sample.id)
-end
+# Category 2: Salads
+Recipe.create(name: Faker::Food.dish, ingredients: Faker::Food.ingredient, directions: "Please read manual",
+  difficulty: Faker::Number.between(1, 5), prep_time: Faker::Number.digit, category_id: 2,
+  user_id: 1)
+Recipe.create(name: Faker::Food.dish, ingredients: Faker::Food.ingredient, directions: "Please read manual",
+   difficulty: Faker::Number.between(1, 5), prep_time: Faker::Number.digit, category_id: 2,
+   user_id: 1)
+Recipe.create(name: Faker::Food.dish, ingredients: Faker::Food.ingredient, directions: "Please read manual",
+  difficulty: Faker::Number.between(1, 5), prep_time: Faker::Number.digit, category_id: 2,
+  user_id: 1)
+
+# Category 3: Main courses
+Recipe.create(name: Faker::Food.dish, ingredients: Faker::Food.ingredient, directions: "Please read manual",
+   difficulty: Faker::Number.between(1, 5), prep_time: Faker::Number.digit, category_id: 3,
+   user_id: 1)
+ Recipe.create(name: Faker::Food.dish, ingredients: Faker::Food.ingredient, directions: "Please read manual",
+    difficulty: Faker::Number.between(1, 5), prep_time: Faker::Number.digit, category_id: 3,
+    user_id: 1)
+Recipe.create(name: Faker::Food.dish, ingredients: Faker::Food.ingredient, directions: "Please read manual",
+   difficulty: Faker::Number.between(1, 5), prep_time: Faker::Number.digit, category_id: 3,
+   user_id: 1)
+
+# Category 4: Desserts
+Recipe.create(name: Faker::Food.dish, ingredients: Faker::Food.ingredient, directions: "Please read manual",
+  difficulty: Faker::Number.between(1, 5), prep_time: Faker::Number.digit, category_id: 4,
+  user_id: 1)
+Recipe.create(name: Faker::Food.dish, ingredients: Faker::Food.ingredient, directions: "Please read manual",
+   difficulty: Faker::Number.between(1, 5), prep_time: Faker::Number.digit, category_id: 4,
+   user_id: 1)
+Recipe.create(name: Faker::Food.dish, ingredients: Faker::Food.ingredient, directions: "Please read manual",
+  difficulty: Faker::Number.between(1, 5), prep_time: Faker::Number.digit, category_id: 4,
+  user_id: 1)
