@@ -13,7 +13,7 @@ class Appetizers extends Component {
         <h2>Appetizers</h2>
         <br/>
           <ul className="ul-no-bullet">
-          { ["appetizer1", "appetizer2", "appetizer3", "appetizer4"].map((item, index) => {
+          { ["Barbecue Ribs", "Tiramisù", "Fish and chips", "Lasagne"].map((item, index) => {
               return (
                 <Item
                   data={[1, item, (index + 1)]}

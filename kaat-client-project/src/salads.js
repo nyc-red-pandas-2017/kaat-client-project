@@ -14,7 +14,7 @@ class Salads extends Component {
         <h2>Salads</h2>
         <br/>
           <ul className="ul-no-bullet">
-            { ["salads1", "salads2", "salads3", "salads4"].map((item, index) => {
+            { ["Barbecue Ribs", "Tiramisù", "Fish and chips", "Lasagne"].map((item, index) => {
                 return (
                   <Item
                     data={[2, item, (index + 1)]}

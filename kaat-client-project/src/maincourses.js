@@ -13,7 +13,7 @@ class MainCourses extends Component {
         <h2>Main courses</h2>
         <br/>
           <ul className="ul-no-bullet">
-            { ["maincourses1", "maincourses2", "maincourses3", "maincourses4"].map((item, index) => {
+            { ["Barbecue Ribs", "Tiramisù", "Fish and chips", "Lasagne"].map((item, index) => {
                 return (
                   <Item
                     data={[3, item, (index + 1)]}
