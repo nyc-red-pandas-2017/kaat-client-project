@@ -7,13 +7,6 @@ import {Link} from 'react-router-dom';
 
 class Appetizers extends Component {
   render() {
-    let apps = [{
-        name: 'foo',
-        link: 'bar'
-    },
-    {
-
-    }]
     return (
       <div className="view-other hm-black-light">
         <br/>

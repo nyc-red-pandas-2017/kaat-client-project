@@ -3,7 +3,6 @@ import React, { Component } from 'react';
 import './App.css';
 import './template-style/css/bootstrap.min.css';
 import './template-style/css/mdb.min.css';
-import About from './about';
 import Signup from './signup';
 import Login from './login';
 import Categories from './categories';
@@ -73,9 +72,9 @@ const Nav = () => (
                 aria-expanded="false"><i className="fa fa-user"></i>
               </a>
               <div className="dropdown-menu dropdown-menu-right dropdown-unique" aria-labelledby="navbarDropdownMenuLink">
-                <a className="dropdown-item waves-effect waves-light" href="#">Action</a>
-                <a className="dropdown-item waves-effect waves-light" href="#">Another action</a>
-                <a className="dropdown-item waves-effect waves-light" href="#">Something else here</a>
+                <a className="dropdown-item waves-effect waves-light" href="/">Action</a>
+                <a className="dropdown-item waves-effect waves-light" href="/">Another action</a>
+                <a className="dropdown-item waves-effect waves-light" href="/">Something else here</a>
               </div>
             </li>
           </ul>

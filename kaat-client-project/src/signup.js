@@ -15,7 +15,7 @@ class Signup extends Component {
       $.ajax({
         url: 'http://localhost:5000/users',
         type: 'POST',
-       data: { user: { firstName: firstName, lastName: lastName, email: email, password: password } },
+        data: { user: { first_name: firstName, last_name: lastName, email: email, password: password } },
         success: (response) => {
           console.log('it worked!', response);
         }

@@ -7,6 +7,7 @@ import {Link} from 'react-router-dom';
 
 class Salads extends Component {
   render() {
+
     return (
       <div className="view-other hm-black-light">
         <br/>

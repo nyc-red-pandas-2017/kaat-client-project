@@ -2,12 +2,32 @@ import React, { Component } from 'react';
 import './App.css';
 import './template-style/css/bootstrap.min.css';
 import './template-style/css/mdb.min.css';
-import Item from './item';
 import {Link} from 'react-router-dom';
+import $ from 'jquery';
 
 class Recipe extends Component {
+  constructor(){
+    super();
+    this.state= {
+      recipe: {}
+    }
+  }
+
+  componentDidMount(){
+    //STEP1: use current url
+    //STEP2: make an ajax request to get that recipe
+    $.ajax({
+      url: `http://localhost:5000/${this.props.match.url}`,
+      type: 'GET',
+      success: (response) => {
+        this.setState({recipe: response["recipe"]})
+      }
+      });
+  }
+
   render() {
-    console.log(this.props)
+    let recipe = this.state.recipe
+    console.log(recipe)
     return (
       <div className="view-other hm-black-light">
         <br/>
@@ -19,30 +39,26 @@ class Recipe extends Component {
                 <li>
                   <center>
                   <h4><b>Name</b></h4>
-                  <p className="white-bg-p">Lorem ipsum </p>
+                  <p className="white-bg-p">{recipe.name}</p>
                 </center>
                 </li>
                 <li>
-                  <h4><b>Ratings</b></h4>
-                  <p className="white-bg-p">5</p>
-                </li>
-                <li>
                   <h4><b>Prep time</b></h4>
-                  <p className="white-bg-p">10 mins</p>
+                  <p className="white-bg-p">{recipe.prep_time} minutes</p>
                 </li>
                 <li>
                   <h4><b>Ingredients</b></h4>
-                  <p className="white-bg-p-2">Lorem ipsum dolor sit am,consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                  <p className="white-bg-p-2">{recipe.ingredients}</p>
                 </li>
                 <li>
                   <h4><b>Direction</b></h4>
-                  <p className="white-bg-p-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                  <p className="white-bg-p-2">{recipe.directions}</p>
                 </li>
                 <li>
                   <h4><b>Comments</b></h4>
-                  <p className="white-bg-p-2">Lorem ipsum dolor sit amet!</p>
+                  <p className="white-bg-p-2">This was a great recipe!</p>
 
-                
+
                 </li>
               </ul>
 
