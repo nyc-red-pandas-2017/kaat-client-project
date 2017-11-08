@@ -33,6 +33,9 @@ class Recipe extends Component {
     //var url_category = "/categories/" + {recipe.category_id};
     return (
       <div className="view-other hm-black-light">
+
+
+
         <br/>
         <h2>Recipe</h2>
 

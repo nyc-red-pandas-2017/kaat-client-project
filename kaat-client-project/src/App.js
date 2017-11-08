@@ -11,7 +11,10 @@ import Salads from './salads';
 import MainCourses from './maincourses';
 import Desserts from './desserts';
 import Recipe from './recipe';
-// import TopNavigation from './navigation';
+
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import getMuiTheme from 'material-ui/styles/getMuiTheme';
+import SearchBar from 'material-ui-search-bar';
 
 import {
   BrowserRouter as Router,
@@ -19,12 +22,21 @@ import {
   Link
 } from 'react-router-dom'
 
+const muiTheme = getMuiTheme({
+  palette: {
+    textColor: '#333',
+  },
+  appBar: {
+    height: 50,
+  },
+});
+
 class App extends Component {
   render() {
     return (
       <Router>
         <div>
-          <Nav/>
+          <Nav />
           <Route exact path="/" component={Home}/>
           <Route exact path="/login" component={Login}/>
           <Route exact path="/signup" component={Signup}/>
@@ -43,7 +55,13 @@ class App extends Component {
 const Nav = () => (
   <nav className=" navbar navbar-expand-lg navbar-dark">
     <div className="container">
-      {/* <TopNavigation/> */}
+
+      <MuiThemeProvider muiTheme={muiTheme}>
+        <SearchBar
+          onChange={() => console.log('onChange')}
+        />
+      </MuiThemeProvider>
+
 
       <a className="navbar-brand waves-effect waves-light" href="/">Recipe Manager</a>
       <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-3" aria-controls="navbarSupportedContent-3"
